@@ -12,13 +12,13 @@ Fraction::~Fraction()
 
 void Fraction::setNumDenom(int xNum, int xDenom)
 {
-	if (xDenom == 0)
+	if (xDenom == 0)		// if the denominator is zero display warning message
 	{
 		cout << "Denominator cannot be zero! " << endl;
 	}
 
 
-	else
+	else			//or else asign values to the internal class private variables
 	{
 		Num = xNum;
 		Denom = xDenom;
@@ -34,44 +34,44 @@ Fraction Fraction::getNumDenom(int xNum, int xDenom)
 
 }
 
-Fraction Fraction::operator + (const Fraction& param)
+Fraction Fraction::operator + (const Fraction& param) // overloading the addition(+) operator
 {
-	Fraction temp;
-	temp.Num = Num * param.Denom + param.Num * Denom;
-	temp.Denom = Denom * param.Denom;
-	return temp;
+	Fraction result;
+	result.Num = Num * param.Denom + param.Num * Denom;		
+	result.Denom = Denom * param.Denom;
+	return result;
 
 }
 
-Fraction Fraction::operator - (const Fraction& param)
+Fraction Fraction::operator - (const Fraction& param)		//overloading the subtraction(-) operator 
 {
-	Fraction temp;
-	temp.Num = Num * param.Denom - param.Num * Denom;
-	temp.Denom = Denom * param.Denom;
-	return temp;
+	Fraction result;
+	result.Num = Num * param.Denom - param.Num * Denom;
+	result.Denom = Denom * param.Denom;
+	return result;
 }
 
-Fraction Fraction::operator * (const Fraction &param)
+Fraction Fraction::operator * (const Fraction &param)		//overloading the multiplication (*) operator
 {
-	Fraction temp;
-	temp.Num = Num * param.Num;
-	temp.Denom = Denom * param.Denom;
-	return temp;
+	Fraction result;
+	result.Num = Num * param.Num;
+	result.Denom = Denom * param.Denom;
+	return result;
 }
 
-Fraction Fraction::operator / (const Fraction &param)
+Fraction Fraction::operator / (const Fraction &param)  //overloading the division (/) operator
 {
-	Fraction temp;
-	temp.Num = Num * param.Denom;
-	temp.Denom = Denom * param.Num;
-	return temp;
+	Fraction result;
+	result.Num = Num * param.Denom;
+	result.Denom = Denom * param.Num;
+	return result;
 }
 
 
 void Fraction::print()
 {
 
-	if (Denom != 0)
+	if (Denom != 0)		// check if the denominator is not zero and reduce the fraction to its simplest terms
 	{
 		for (int count = 2; count <= 10; count++)
 		{
@@ -83,9 +83,9 @@ void Fraction::print()
 		}
 	}
 
-	if (Denom == 1)
+	if (Denom == 1)		// if denominator is one, then the fraction equals the Numerator
 		cout << Num;
 
 	else
-		cout << Num << "/" << Denom;
+		cout << Num << "/" << Denom;		// display the fraction
 }
