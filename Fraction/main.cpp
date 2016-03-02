@@ -6,10 +6,10 @@ void main()
 	Fraction frac1;
 	Fraction frac2;
 	Fraction Result;
-	frac1.setNumDenom(10, 4);
+	frac1.setNumDenom(7, 4);
 	frac2.setNumDenom(3, 2);
 
-	Result = frac1.Add(frac2);
+	Result = frac1 + frac2;
 	cout << "The sum of ";
 	frac1.print();
 	cout << " And ";

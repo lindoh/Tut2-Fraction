@@ -15,10 +15,11 @@ public:
 	~Fraction();				//destructor method
 	void setNumDenom(int, int);			//set appropriate numerator and denominator for a fraction
 	Fraction getNumDenom(int, int);		//returns a fraction
-	Fraction Add(Fraction value);		//add function takes and returns one function
+	//Fraction Add(Fraction value);		//add function takes and returns one function
 	Fraction Subtract(Fraction value);
 	Fraction Multiply(Fraction value);
 	Fraction Divide(Fraction value);
+	Fraction operator + (const Fraction &);
 	void print();
 
 };

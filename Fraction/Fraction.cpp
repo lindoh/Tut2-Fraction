@@ -35,13 +35,13 @@ Fraction Fraction::getNumDenom(int xNum, int xDenom)
 }
 
 
-Fraction Fraction::Add(Fraction value)
-{
-	Fraction result;
-	result.Num = Num * value.Denom + value.Num * Denom;
-	result.Denom = Denom * value.Denom;
-	return result;
-}
+//Fraction Fraction::Add(Fraction value)
+//{
+	//Fraction result;
+	//result.Num = Num * value.Denom + value.Num * Denom;
+	//result.Denom = Denom * value.Denom;
+	//return result;
+//}
 
 Fraction Fraction::Subtract(Fraction value)
 {
@@ -65,6 +65,14 @@ Fraction Fraction::Divide(Fraction value)
 	result.Num = Num *value.Denom;
 	result.Denom = Denom * value.Num;
 	return result;
+}
+Fraction Fraction::operator + (const Fraction& param)
+{
+	Fraction temp;
+	temp.Num = Num * param.Denom + param.Num * Denom;
+	temp.Denom = Denom * param.Denom;
+	return temp;
+
 }
 
 void Fraction::print()
