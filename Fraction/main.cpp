@@ -18,7 +18,7 @@ void main()
 	Result.print();
 	cout << endl;
 
-	Result = frac1.Subtract(frac2);
+	Result = frac1 - frac2;
 	cout << "The difference of ";
 	frac1.print();
 	cout << " And ";
@@ -27,7 +27,7 @@ void main()
 	Result.print();
 	cout << endl;
 
-	Result = frac1.Multiply(frac2);
+	Result = frac1 * frac2;
 	cout << "The product of ";
 	frac1.print();
 	cout << " And ";
@@ -36,7 +36,7 @@ void main()
 	Result.print();
 	cout << endl;
 
-	Result = frac1.Divide(frac2);
+	Result = frac1 / frac2;
 	cout << "The quotient of ";
 	frac1.print();
 	cout << " And ";
